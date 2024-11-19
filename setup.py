@@ -4,7 +4,6 @@ Created on Tue Nov 12 18:56:10 2024
 
 @author: Haroon
 """
-print("hello")
 
 
 #packagrs for project 
