@@ -37,7 +37,7 @@ print("Intercept:", lin_reg_2.intercept_)
 #model paramaters
 print("Model Parameters:", lin_reg_2.get_params())
 
-
+#Visualise Linear Regression 
 plt.scatter(X,y,color = 'red')
 plt.plot(X, lin_reg.predict(X), color = 'blue')
 plt.title('Truth or Bluff (Linear Regression)')
