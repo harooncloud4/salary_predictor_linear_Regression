@@ -8,6 +8,7 @@ Created on Sat Nov 30 18:37:01 2024
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import PolynomialFeatures
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import r2_score, mean_squared_error
 
 
@@ -33,12 +34,12 @@ def train_polynomial_regression(X_train,y_train):
     lin_reg_2.fit(X_poly,y_train)
     return poly_reg, lin_reg_2
 
-    # # Display model details
-    # print("Coefficients:", lin_reg_2.coef_)
-    # print("Intercept:", lin_reg_2.intercept_)
-
-    # #model paramaters
-    # print("Model Parameters:", lin_reg_2.get_params())
+def train_decision_tree(X_train,y_train):
+    # Training the Decision Tree Regression model on the whole dataset
+    
+    regressor = DecisionTreeRegressor(random_state = 0)
+    regressor.fit(X_train,y_train)
+    return regressor
 
 # Evaluate Model
 def evaluate_model(y_true, y_pred):
